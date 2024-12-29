@@ -1,0 +1,137 @@
+/* Allgemeine Stile für das Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a; /* Sehr dunkler Hintergrund für das gesamte Layout */
+    color: #fff; /* Helle Textfarbe */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container für die Wetter-App */
+.container {
+    background: #222; /* Dunklerer Hintergrund für den Container */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8); /* Tieferer Schatten für 3D-Effekt */
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    transform: translateY(5px); /* Kleine Verschiebung für 3D-Effekt */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Container hebt sich an, wenn der Benutzer darüber schwebt */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9); /* Verstärkter Schatten bei Hover */
+}
+
+/* Styling für das Eingabefeld */
+input[type="text"] {
+    width: 85%;
+    padding: 14px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(72, 211, 172, 0.8); /* Heller Grünton bei Fokus */
+    border-color: #4CAF50; /* Grüner Rand beim Fokus */
+}
+
+/* Button Styling mit sanften Übergängen */
+button {
+    padding: 14px 30px;
+    border: none;
+    background-color: #4CAF50; /* Grüner Hintergrund */
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Schattierung für 3D-Effekt */
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Dunkleres Grün beim Hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Verstärkter Schatten bei Hover */
+    transform: translateY(-4px); /* Leichte Anhebung bei Hover */
+}
+
+/* Styling für die Wetteranzeige */
+#weather-info {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #f0f0f0; /* Helle Textfarbe */
+    line-height: 1.6;
+}
+
+/* Styling für das Symbol */
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.weather-icon:hover {
+    transform: scale(1.2); /* Vergrößert das Wetter-Symbol bei Hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Verstärkter Schatten bei Hover */
+}
+
+/* Styling für die Temperatur und andere Infos */
+h2 {
+    color: #4CAF50; /* Grüner Titel für die Stadt */
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Fehlermeldung Styling */
+#error-message {
+    color: #ff5555; /* Rote Fehlermeldung */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design: kleinere Bildschirmgrößen */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px; /* Größere Schrift auf kleinen Bildschirmen */
+    }
+
+    input[type="text"] {
+        width: 100%; /* Eingabefeld auf 100% der Breite */
+    }
+
+    button {
+        width: 100%; /* Button auf 100% der Breite */
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
